@@ -1,6 +1,8 @@
 
 body{
     background-image: url(bkg.png);
+    display: flex;
+    flex-direction: column;
 }
 .dino{
     width: 100px;
@@ -28,8 +30,8 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .texto{
-    width: 300px;
-    height: 100px;
+    width: 500px;
+    height: 200px;
     text-align: center;
     color:#4819c9;
     margin-top: 300px;
