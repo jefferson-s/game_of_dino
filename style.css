@@ -1,10 +1,16 @@
+
+body{
+    background-image: url(bkg.png);
+}
 .dino{
-    width: 60px;
+    width: 100px;
     height: 60px;
-    background: green;
+    margin-left: 10px;
+    background-image: url(dino1.png);
+    background-size: cover;
     /* definindo posição do dino*/
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
 }
 
 .cactus{
@@ -12,5 +18,88 @@
     width: 60px;
     height: 60px;
     bottom: 0;
-    background: red;
+    background-image: url(cactus1.png);
+    background-size:cover;
+}
+.game-over{
+    text-align: center;
+    color: rgb(105, 2, 2);
+    margin-top: 200px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.texto{
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    color:#4819c9;
+    margin-top: 300px;
+    justify-content: center;
+    box-shadow: 5px 5px 5px 5px green;
+    margin-left: 700px;
+ 
+}
+
+@keyframes slideright{
+    from{
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0;
+    }
+}
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url(background.png);
+    background-repeat: repeat-x;
+    animation: slideright 3000s infinite linear;
+    width: 100%;
+    height: 200px;
+}
+.game-over2{
+    background-color: rgb(0, 0, 0);
+    width: 150px;
+    height: 50px;
+    margin-left: 830px;
+    text-align: center;
+    color: rgb(253, 253, 253);
+    box-shadow: 5px 5px rgb(92, 92, 107);
+    display: flex;
+    flex-direction: center;
+    justify-self: center;
+    
+
+    padding: 50px;
+    font-family: Verdana;
+    align-items: center;
+    border:2px solid black;
+    border-radius: 50%;
+}
+@media (max-width: 768px){
+    .game-over2{
+        margin-left: 250px;
+        display: flex;
+    }
+    .texto{
+        display: flex;
+        margin-left: 230px;
+    }
+}
+
+@media (max-width: 1024px){
+    .game-over2{
+        margin-left: 380px;
+    }
+    .texto{
+        margin-left: 350px;
+    }
+}
+
+@media (max-width: 100%){
+    .game-over2{
+        margin-left: 900px;
+    }
+    .texto{
+        margin-left: 900px;
+    }
 }
