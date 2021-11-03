@@ -3,6 +3,7 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
 let isJumping = false;
+let position = 0;
  
 
 //adding events to keyboard buttons to control the dino
@@ -18,8 +19,7 @@ function handleKeyUp(event) {
 //function for jump 
 
 function jump() {
-    let position = 0;
-
+  
     isJumping = true;
 
     let upInterval = setInterval(() => {
@@ -57,10 +57,10 @@ function createCactus(){
         if (cactusPosition < -60){
             clearInterval(leftInterval);
             background.removeChild(cactus);
-        }else if (cactusPosition > 0 && cactusPosition < 60){
+        }else if (cactusPosition > 0 && cactusPosition < 60 && position < 60){
         //game over
         clearInterval(leftInterval);
-        document.body.innerHTML = '<h1 class= "game-over">Game Over</h1>'
+        document.body.innerHTML = '<h1 class= "game-over">Game Over</h1><h2 class= "game-over2">Press F5 to restart the Game</h2>'
         }else {
             cactusPosition -= 10;
             cactus.style.left = cactusPosition + 'px';
